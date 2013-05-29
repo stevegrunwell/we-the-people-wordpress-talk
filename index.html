@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>We The People WordPress Plugin</title>
+<link href="reveal-js/css/reveal.min.css" rel="stylesheet" media="all" />
+<link href="reveal-js/css/theme/default.css" rel="stylesheet" rel="stylesheet" media="all" />
+<link href="reveal-js/lib/css/zenburn.css" rel="stylesheet" media="all" />
+<style type="text/css">
+  .reveal footer { position: absolute; left: 22px; bottom: 12px; max-width: 960px; font-size: .5em; }
+</style>
+</head>
+<body>
+  <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+
+        <section>
+          <h1>We The People WordPress Plugin</h1>
+          <p>National Day of Civic Hacking<br>
+            June 1, 2013<br>
+            <a href="https://twitter.com/buckeyewebdev" rel="external">@BuckeyeWebDev</a> / <a href="https://twitter.com/stevegrunwell" rel="external">@stevegrunwell</a>
+          </p>
+
+        </section>
+
+        <section>
+          <h2>Who am I?</h2>
+          <ul>
+            <li class="fragment">Developer at <a href="http://www.buckeyeinteractive.com/" rel="external">Buckeye Interactive</a> in New Albany, OH</li>
+            <li class="fragment">WordPress plugin developer</li>
+            <li class="fragment"><a href="http://stevegrunwell.com/" rel="external">http://stevegrunwell.com</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Goals of the plugin</h2>
+          <ol>
+            <li class="fragment">Make it as easy as possible for site owners to embed petitions</li>
+            <li class="fragment">Provide reasonable defaults but make them easy for developers to override</li>
+            <li class="fragment">Reduce impact on site performance</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>Default styles in TwentyTwelve</h2>
+          <img src="media/petition-twentytwelve.png" alt="A We The People petition embedded in a WordPress blog post using the default TwentyTwelve theme" />
+        </section>
+
+        <section>
+          <h2>How the plugin works</h2>
+          <ul>
+            <li class="fragment"><code>[wtp-petition]</code> shortcode</li>
+            <li class="fragment">Sidebar widget</li>
+            <li class="fragment">Access to the API methods via the <code>$we_the_people</code> global (for advanced users)</li>
+          </ul>
+        </section>
+
+        <section data-state="video">
+          <video src="media/shortcode-widget.m4v" data-autoplay></video>
+        </section>
+
+        <section>
+          <h2>Highly themeable</h2>
+          <p>WordPress-inspired template inheritance:</p>
+          <ol>
+            <li>wtp-petition-{id}.php (child theme)</li>
+            <li>wtp-petition.php (child theme)</li>
+            <li>wtp-petition-{id}.php (parent theme)</li>
+            <li>wtp-petition.php (parent theme)</li>
+            <li>templates/wtp-petition.php (plugin)</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>Performance</h2>
+          <ul>
+            <li>Stores API responses as short-term transients</li>
+            <li>Keeps long-term transients in case of API disruption</li>
+            <li>Ajax results cached to prevent unnecessary calls</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Questions?</h2>
+          <br>
+          <p>Steve Grunwell<br>
+            Developer, Buckeye Interactive<br>
+            <a href="https://twitter.com/buckeyewebdev" rel="external">@BuckeyeWebDev</a> / <a href="https://twitter.com/stevegrunwell" rel="external">@stevegrunwell</a>
+          </p>
+        </section>
+
+      </div><!-- .slides -->
+
+      <footer>
+        <p>We The People WordPress Plugin<br>
+          <a href="https://github.com/buckii/we-the-people-wordpress/" rel="external">https://github.com/buckii/we-the-people-wordpress/</a>
+        </p>
+      </footer>
+
+    </div><!-- .reveal -->
+
+<script src="reveal-js/js/reveal.min.js"></script>
+<script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    transition: 'concave', // default/cube/page/concave/zoom/linear/fade/none
+  });
+</script>
+</body>
+</html>
